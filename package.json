@@ -1,5 +1,5 @@
 {
-  "name": "cici-pets",
+  "name": "estudos-react",
   "version": "0.1.0",
   "private": true,
   "description": "This project was bootstrapped with Create React App",
@@ -20,5 +20,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "react-router-dom": "^7.13.2",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^5.2.0"
   }
 }
