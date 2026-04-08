@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css'
-import Header from './layout/Header';
-import Footer from './layout/Footer';
-import Home from './components/Home';
-import Enterprise from './components/Enterprise';
-import Contact from './components/Contact';
-import Projects from './components/Projects';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import Home from './components/pages/Home';
+import Enterprise from './components/pages/Enterprise';
+import Contact from './components/pages/Contact';
+import Projects from './components/pages/Projects';
+import NewProject from './components/pages/NewProject';
 function App(){
   return(
     <div>
@@ -16,6 +17,7 @@ function App(){
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/enterprise' element={<Enterprise/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/newproject' element={<NewProject/>}/>
       </Routes>
       <Footer />
       </BrowserRouter>
