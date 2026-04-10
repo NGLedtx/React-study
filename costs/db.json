@@ -1,21 +1,45 @@
 {
-   "projects": [], 
-   "categories":[
+  "projects": [
     {
-        "id": 1,
-        "name": "Infra"
-    },
-    {
-        "id": 2,
+      "name": "Contratação de um Desenvolvedor",
+      "budget": "7000",
+      "category": {
+        "id": "2",
         "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "3fVGajdI_O8"
     },
     {
-        "id": 3,
-        "name": "Design"
-    },
-    {
-        "id": 4,
-        "name": "Planejamento"
+      "name": "Contratação de um Desenvolvedor",
+      "budget": "7000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "lPjnvT50GFo"
     }
-   ]
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
