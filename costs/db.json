@@ -21,6 +21,94 @@
       "cost": 0,
       "services": [],
       "id": "lPjnvT50GFo"
+    },
+    {
+      "budget": "9000",
+      "name": "Bônus a equipe",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "ekNdulrVyw0"
+    },
+    {
+      "name": "Projeto1",
+      "budget": "3000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "7MgIXkGOjAE"
+    },
+    {
+      "name": "Projeto 2",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "8BYf5SfYWD8"
+    },
+    {
+      "name": "Bônus a equipe",
+      "budget": "58888",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "tNd3RFg_XLE"
+    },
+    {
+      "name": "Bônus a equipe",
+      "budget": "999",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "tftanOVWn9Q"
+    },
+    {
+      "name": "Projeto 4",
+      "budget": "9000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "463-k4m_C_U"
+    },
+    {
+      "name": "Bônus a equipe",
+      "budget": "6777",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "fwI5jYEYHdM"
+    },
+    {
+      "name": "Contratação de um Desenvolvedor",
+      "budget": "9999999999",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "ef-iFT_20HQ"
     }
   ],
   "categories": [

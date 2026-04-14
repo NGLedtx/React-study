@@ -18,7 +18,7 @@ function NewProject(){
         .then((resp) => resp.json())
         .then((data) => {
             //alert(data);
-            navigate("/projects", {message: "Projeto criado com sucesso!"});
+            navigate("/projects", { state: { message: "Projeto criado com sucesso!" } });
         }
         ).catch((err) => window.alert(err))
     }
