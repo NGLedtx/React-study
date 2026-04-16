@@ -1,4 +1,5 @@
 import LinkButton from "../layout/LinkButton";
+import Loading from "../layout/Loading";
 
 function Home(){
     return(

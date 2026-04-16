@@ -9,7 +9,7 @@ import Projects from './components/pages/Projects';
 import NewProject from './components/pages/NewProject';
 function App(){
   return(
-    <div>
+    <div className='min-h-screen flex flex-col'>
       <BrowserRouter>
       <Header />
       <Routes>
