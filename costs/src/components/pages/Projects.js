@@ -1,5 +1,5 @@
 import Message from "../layout/Message";
-import { useLocation } from "react-router-dom";
+import {useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import LinkButton from "../layout/LinkButton";
 import ProjectCard from "../project/ProjectCard";
@@ -28,6 +28,19 @@ function Projects(){
             }, 1000)
     }, [])
 
+    function removeProject(id){
+        fetch(`http://localhost:5000/projects/${id}`,{
+            method: "DELETE",
+            headers:{
+                'content-Type': 'application/json'
+            },
+        }).then(resp => resp.json()).catch(err => window.alert(err))
+        .then((data) => {
+            setprojects(projects.filter((project) => project.id !== id))
+        })
+
+    }
+
     return(
         <div className="bg-gray-100 flex-grow">
             <div className="flex items-center justify-between p-10">
@@ -40,7 +53,7 @@ function Projects(){
                     <Loading/>
                 ): projects.length > 0 ?(
                     projects.map((project) =>(
-                        <ProjectCard name={project.name} budget={project.budget} category={project.category.name} key={project.id}/>
+                        <ProjectCard id={project.id} name={project.name} budget={project.budget} category={project.category.name} key={project.id} handleRemove={removeProject}/>
                     ))) :(
                     <div className="flex items-center justify-center">
                         <h1 className="bold text-2xl">Nenhum projeto adicionado 😔</h1>

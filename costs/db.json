@@ -1,17 +1,5 @@
 {
-  "projects": [
-    {
-      "name": "Contratação de um Desenvolvedor",
-      "budget": "20000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": "Cu7snWZe6sI"
-    }
-  ],
+  "projects": [],
   "categories": [
     {
       "id": "1",

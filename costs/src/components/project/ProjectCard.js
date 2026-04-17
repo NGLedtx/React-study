@@ -1,6 +1,12 @@
 import {BsPencilSquare, BsFillTrashFill} from 'react-icons/bs';
 import LinkIcon from '../layout/LinkIcon';
 function ProjectCard({id, name, budget, category, handleRemove}) {
+
+    const remove = (e) => {
+        e.preventDefault();
+        handleRemove(id);
+    }
+
     return(
         <div className="flex border rounded-md justify-between items-center p-5 bg-white shadow-md">
             <div className='flex flex-col gap-2'>
@@ -10,7 +16,9 @@ function ProjectCard({id, name, budget, category, handleRemove}) {
             </div>
             <div className='flex flex-col gap-4'>
                 <LinkIcon to={`/projects/${id}`} icon={<BsPencilSquare/>} tooltip="Editar Projeto"/>
-                <LinkIcon to={`/projects/${id}/delete`} icon={<BsFillTrashFill/>} tooltip="Excluir Projeto"/>
+                <button onClick={remove} className="border rounded-md p-2 hover:bg-gray-200 text-red-600" title="Remover Projeto">
+                    <BsFillTrashFill/>
+                </button>
             </div>
         </div>
     )
