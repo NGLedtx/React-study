@@ -7,6 +7,8 @@ import Enterprise from './components/pages/Enterprise';
 import Contact from './components/pages/Contact';
 import Projects from './components/pages/Projects';
 import NewProject from './components/pages/NewProject';
+import NotFound from './components/pages/NotFound';
+import EditProject from './components/pages/EditProject';
 function App(){
   return(
     <div className='min-h-screen flex flex-col'>
@@ -18,6 +20,8 @@ function App(){
         <Route path='/enterprise' element={<Enterprise/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/newproject' element={<NewProject/>}/>
+        <Route path='/editproject/:id' element={<EditProject/>}/>
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
       <Footer />
       </BrowserRouter>

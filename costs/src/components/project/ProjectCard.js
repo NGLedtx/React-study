@@ -4,7 +4,12 @@ function ProjectCard({id, name, budget, category, handleRemove}) {
 
     const remove = (e) => {
         e.preventDefault();
-        handleRemove(id);
+        const confirm = window.confirm("Deseja realmente remover o projeto?");
+        if(!confirm){
+            return;
+        }else{
+            handleRemove(id);
+        }  
     }
 
     return(
@@ -15,7 +20,7 @@ function ProjectCard({id, name, budget, category, handleRemove}) {
                 <label><b>Categoria:</b> {category}</label>
             </div>
             <div className='flex flex-col gap-4'>
-                <LinkIcon to={`/projects/${id}`} icon={<BsPencilSquare/>} tooltip="Editar Projeto"/>
+                <LinkIcon to={`/EditProject/${id}`} icon={<BsPencilSquare/>} tooltip="Editar Projeto"/>
                 <button onClick={remove} className="border rounded-md p-2 hover:bg-gray-200 text-red-600" title="Remover Projeto">
                     <BsFillTrashFill/>
                 </button>

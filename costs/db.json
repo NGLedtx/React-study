@@ -1,5 +1,17 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "name": "Contratação de um líder de produção",
+      "budget": "8000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "vNCWhKb6Q_M"
+    }
+  ],
   "categories": [
     {
       "id": "1",
