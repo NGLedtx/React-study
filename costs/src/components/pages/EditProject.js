@@ -2,11 +2,14 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ProjectForm from "../project/ProjectForm";
 import Loading from "../layout/Loading";
+import Message from "../layout/Message";
 function EditProject() {
 
     const {id} = useParams();
     const [editProject, setEditProject] = useState(null);
     const [showProjectForm, setShowProjectForm] = useState(false);
+    const [showMessage, setShowMessage] = useState()
+    const [type, setType] = useState()
 
     useEffect(() => {
         fetch(`http://localhost:5000/projects/${id}`, {
@@ -23,22 +26,43 @@ function EditProject() {
     if (!editProject) {
         return <Loading/>}
         function editPost(EditProject){
-           
+           if(EditProject.budget < EditProject.cost){
+            setShowMessage("O orçamento não pode ser menor que o custo do projeto!")
+            setType("error")
+            return false
+           }
+
+           fetch(`http://localhost:5000/projects/${EditProject.id}`,{
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(EditProject),
+           })
+           .then(resp => resp.json())
+           .then((data) =>{
+            setEditProject(data)
+            setShowProjectForm(false)
+            setShowMessage("Projeto Atualizado!")
+            setType("success")
+           })
+           .catch(err => window.alert(err))
+
         }
         function toggleProjectForm() {
             setShowProjectForm(!showProjectForm);
         }
     return (
-        <div className="flex flex-col p-10 flex-grow bg-gray-100">
+        <div className="flex flex-col p-10 h-screen bg-gray-100">
+            {showMessage && <Message type={type} msg={showMessage}/>}
             <div className="flex justify-between">
                 <h1 className="text-3xl"><b>Projeto:</b> {editProject.name}</h1>
-                <button onClick={toggleProjectForm} className="bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800">
+                <button onClick={toggleProjectForm} className="bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800 ">
                     {!showProjectForm ? 'Editar Projeto' : 'Fechar Formulário'}
                 </button>
             </div>
                 {!showProjectForm ? (
                     <div className="flex flex-col my-4 border-b-2 shadow-md text-lg pb-4 gap-3 p-5">
-                        <h2 className="text-2xl font-bold">Editar Projeto</h2>
                         <div className="flex ">
                              <span><b>Categoria:</b> {editProject.category.name}</span>
                         </div>
@@ -50,9 +74,11 @@ function EditProject() {
                         </div>
                     </div>
                 ):(
-                    <div className="mt-4">
-                        <h2 className="text-xl font-bold">Formulário de Edição</h2>
-                        <p>Aqui você pode editar os detalhes do projeto.</p>
+                    <div className="flex flex-col mt-4">
+                        <div className="mb-5">
+                            <h2 className="text-xl font-bold">Formulário de Edição</h2>
+                            <p className="text-gray-500">Aqui você pode editar os detalhes do projeto.</p>
+                        </div>
                         <ProjectForm handleSubmit={editPost} btnText="Concluir Edição" projectData={editProject}/>
                     </div>
                 )}
