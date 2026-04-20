@@ -3,7 +3,7 @@ function Message({type, msg}){
    
     const [visible, setVisible] = useState(false);
      const colors ={
-        success: "bg-green-400 p-4 flex items-center justify-center text-white w-96 rounded-lg", 
+        success: "bg-green-400 p-4 flex items-center justify-center text-white w-96 rounded-lg shadow-md", 
         error: "bg-red-600 p-4 flex items-center justify-center text-white w-30 rounded-lg",
     };
 
