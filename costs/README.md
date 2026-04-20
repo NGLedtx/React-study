@@ -22,4 +22,5 @@ A collection of financial web applications built with React, focused on learning
 git clone https://github.com/your-username/react-study.git
 cd react-study
 npm install
-npm start
+npm run backand  //for the db
+npm start // for the sistem
