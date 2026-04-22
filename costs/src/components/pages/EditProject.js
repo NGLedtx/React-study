@@ -26,6 +26,7 @@ function EditProject() {
     if (!editProject) {
         return <Loading/>}
         function editPost(EditProject){
+            setShowMessage('')
            if(EditProject.budget < EditProject.cost){
             setShowMessage("O orçamento não pode ser menor que o custo do projeto!")
             setType("error")

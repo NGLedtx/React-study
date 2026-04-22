@@ -4,7 +4,7 @@ function Message({type, msg}){
     const [visible, setVisible] = useState(false);
      const colors ={
         success: "bg-green-400 p-4 flex items-center justify-center text-white w-96 rounded-lg shadow-md", 
-        error: "bg-red-600 p-4 flex items-center justify-center text-white w-30 rounded-lg",
+        error: "bg-red-400 p-4 flex items-center justify-center text-white w-30 rounded-lg",
     };
 
     useEffect(() => {
@@ -23,7 +23,7 @@ function Message({type, msg}){
     return(
         <>
         {visible && (
-            <div className="flex justify-center items-center text-center">
+            <div className="flex justify-center items-center text-center mb-9">
                 <div className={`message ${colors[type]} flex text-center justify-center items-center`} >
                     {msg}
                 </div>
