@@ -42,13 +42,13 @@ function Projects(){
     }
 
     return(
-        <div className="bg-gray-100 flex-grow">
+        <div className="bg-gray-100">
             <div className="flex items-center justify-between p-10">
                 <h1 className="text-2xl font-bold">Meus Projetos</h1>
                 <LinkButton to="/NewProject" text=" + Novo projeto"/>
             </div>
             {message && <Message type="success" msg={message}/>}
-            <div className="flex flex-col gap-10 p-10">
+            <div className="flex flex-col gap-5 p-10">
                 {!removeLoading ? (
                     <Loading/>
                 ): projects.length > 0 ?(
