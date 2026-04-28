@@ -8,7 +8,7 @@ import Contact from "./components/pages/Contact";
 import Projects from "./components/pages/Projects";
 import NewProject from "./components/pages/NewProject";
 import NotFound from "./components/pages/NotFound";
-import EditProject from "./components/pages/EditProject";
+import EditProject from "./components/pages/Project";
 function App() {
   return (
     <div className="min-h-screen flex flex-col">

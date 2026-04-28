@@ -42,7 +42,7 @@ function Projects(){
     }
 
     return(
-        <div className="bg-gray-100">
+        <div className="bg-gray-100 min-h-screen">
             <div className="flex items-center justify-between p-10">
                 <h1 className="text-2xl font-bold">Meus Projetos</h1>
                 <LinkButton to="/NewProject" text=" + Novo projeto"/>
