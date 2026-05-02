@@ -1,59 +1,105 @@
 {
   "projects": [
     {
-      "name": "Contratação de um Scrum Master",
-      "budget": "8000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": "zNaoa6V55Xw"
-    },
-    {
-      "name": "Contratação de um Dev",
-      "budget": "90000",
+      "name": "Sistema de Gestão Financeira",
+      "budget": "70000",
       "category": {
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 0,
-      "services": [],
-      "id": "uir-QBGYnGk"
+      "cost": 13000,
+      "services": [
+        {
+          "name": "Desenvolvimento Backend",
+          "cost": "13000",
+          "description": "Criação da API REST com Node.js, autenticação e integração com banco de dados",
+          "id": "d1a14816-82e1-4272-afce-59d4717b9aa1"
+        }
+      ],
+      "id": "jnmh7CbJPbY"
     },
     {
-      "name": "Campanha de evento internacional",
-      "budget": "20000",
+      "name": "Aplicativo de Delivery - FoodExpress",
+      "budget": "80000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 30000,
+      "services": [
+        {
+          "name": "Design de Interface",
+          "cost": "10000",
+          "description": "Criação do layout do aplicativo com foco em usabilidade e experiência do usuário",
+          "id": "0856b941-8286-4adc-895e-d9be81a2856e"
+        },
+        {
+          "name": "Desenvolvimento Mobile",
+          "cost": "20000",
+          "description": "Construção do aplicativo com React Native para Android e iOS.",
+          "id": "8efc93e5-9d19-4be6-a7ad-76553fe42f83"
+        }
+      ],
+      "id": "lsybqny8Zc0"
+    },
+    {
+      "name": "Website Institucional - Clínica Vida",
+      "budget": "12000",
       "category": {
         "id": "3",
         "name": "Design"
       },
       "cost": 0,
       "services": [],
-      "id": "b_foUvF9nb0"
+      "id": "vMD8F6DwHDg"
     },
     {
-      "name": "Arrumar bug no fluxo de atendimento",
-      "budget": "3000",
+      "name": "Plataforma EAD - EduTech",
+      "budget": "60000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 25000,
+      "services": [
+        {
+          "name": "Arquitetura do Sistema",
+          "cost": "8000",
+          "description": "Definição da estrutura da aplicação, banco de dados e escalabilidade",
+          "id": "c8293904-511e-408e-8f17-f64e6f365041"
+        },
+        {
+          "name": "Frontend com React",
+          "cost": "17000",
+          "description": "Desenvolvimento da interface do aluno e do painel administrativo",
+          "id": "084d52db-8837-4853-94d7-bcc3abc2a3e2"
+        }
+      ],
+      "id": "O27uWiPTEuA"
+    },
+    {
+      "name": "Landing Page de Produto - Startup X",
+      "budget": "7000",
       "category": {
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": [],
-      "id": "qcnQCgJ9xz8"
-    },
-    {
-      "name": "Implementação do Jira",
-      "budget": "9000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": "792ISu8K5oA"
+      "cost": 2500,
+      "services": [
+        {
+          "name": "Copywriting",
+          "cost": "1000",
+          "description": "Criação de textos persuasivos focados em conversão",
+          "id": "573e7b31-b599-47f0-8b7b-c8eed28a5dad"
+        },
+        {
+          "name": "Design da Página",
+          "cost": "1500",
+          "description": "Criação do layout visual moderno e responsivo",
+          "id": "9e7b8a75-0c88-4ed3-ac58-fab31479cba4"
+        }
+      ],
+      "id": "_5UkkX4jXLE"
     }
   ],
   "categories": [

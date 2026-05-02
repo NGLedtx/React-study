@@ -38,7 +38,9 @@ function ServiceForm({ handleSubmit, btnText, projectData }) {
         name="description"
         handleOnChange={handleChange}
       />
-      <SubmitButton text={btnText} />
+      <div className="flex justify-center mt-5">
+        <SubmitButton text={btnText} />
+      </div>
     </form>
   );
 }
